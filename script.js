@@ -2,19 +2,30 @@ const wrapper = document.querySelector( '.wrapper' )
 const main = document.querySelector( 'main' )
 const head = document.querySelector( 'h4' )
 const center = document.querySelector( 'center' )
-
+const back = document.querySelector( '.back' )
 
 function list ( card, book )
 {
     card.addEventListener( 'click', function ()
     {
-        console.log( 4 )
         wrapper.classList.add( 'hide' )
         head.classList.add( 'hide' )
         center.classList.add( 'hide' )
         book.classList.remove( 'hide' )
+        back.classList.remove( 'hide' )
     } )
+
+    back.addEventListener( 'click', function ()
+    {
+        wrapper.classList.remove( 'hide' )
+        head.classList.remove( 'hide' )
+        center.classList.remove( 'hide' )
+        book.classList.add( 'hide' )
+        back.classList.add( 'hide' )
+    } )
+
 }
+
 
 
 const devil_card = document.querySelector( '.devil-card' )
